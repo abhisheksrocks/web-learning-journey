@@ -7,15 +7,24 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- This is a comment -->
+    <!-- 
+      * Anchor atribute is meant to hold other tags inside it
+      * that being said it can work with simple text, but it shouldn't
+      * be considered as a good way writing
+    -->
+    <a href="http://www.google.com">Visit google</a>
+    <br />
+    <br />
+    <a href="http://www.google.com" target="_blank"
+      >Visit google in another tab</a
+    >
 
-    <!-- Abstract image -->
-    <img src="./images/abstract.jpg" alt="Random abstract image" />
-
-    <p>
-      line 1
-      <!-- can be written between the code -->
-      line 2
-    </p>
+    <!-- 
+      * A much better way to do the same thing as above is
+    -->
+    <a href="http://www.google.com"><p>Visit google correctly</p></a>
+    <a href="http://www.google.com" target="_blank"
+      ><p>Visit google in another tab correctly</p></a
+    >
   </body>
 </html>
