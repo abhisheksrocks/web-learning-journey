@@ -6,94 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
   </head>
-  <!--
-    In this example we will be moving from the bottom of the page to the top
-    of the page without scrolling using link.
-
-    For this we use something called 'id' attribute for the element we want
-    in view, when the 'Move to top' button is clicked.
-
-    In this case, we want to move to the top of the page, so we have put it on
-    <html> tag directly. But we can get similar results with any other
-    tag (like <p>, <br/> , <a>, etc.).
-  -->
   <body>
-    <p>Top of the page</p>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <a href="#top"><p>Go to top of the page</p></a>
+    <!-- 
+      Image link
+
+      You can use anchor(<a>) tag with other tag inside it, and not just plain text.
+     -->
+    <a href="https://www.google.com">
+      <img src="./images/abstract.jpg" alt="" />
+    </a>
+
+    <!-- 
+      Empty link:
+      
+      ! Non-recommended way: To keep href attribute empty.
+      ! This will refressh the page, which we generally don't want with an empty link.
+      
+      * Recommended Way - To put '#' in href.
+      * Think of this like an empty id. Clicking the link won't change anything.
+     -->
+    <a href="#">
+      <p>This is an empty link</p>
+    </a>
   </body>
 </html>
