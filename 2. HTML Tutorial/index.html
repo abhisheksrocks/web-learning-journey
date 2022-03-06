@@ -8,31 +8,39 @@
   </head>
   <body>
     <!-- 
-      Nested lists, like:
-      * a
-        1. a1
-        2. a2
-      * b
-        1. b1
-        2. b2
+      Table tags:-
+      <table></table> - the main starting tag of a table
+      <th></th> - table headings
+      <tr></tr> - begins and end a row
+      <td></td> - table cell data
 
-      or:
-      1. a
-        * a1
-        * a2
-      2. b
-        * b1
-        * b2
+      <td colspan='2'> instructs that the data will over two columns
+      <td rowspan='2'> instructs that the data will over two rows
      -->
-    <h3>Nested lists</h3>
-    <ul>
-      <li>Element a</li>
-      <ol>
-        <li>Element a1</li>
-        <li>Element a2</li>
-      </ol>
-      <li>Element b</li>
-      <li>Element c</li>
-    </ul>
+    <table>
+      <tr>
+        <th>Heading 1</th>
+        <th>Heading 2</th>
+        <th>Heading 3</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td colspan="2">4</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td rowspan="2">6</td>
+        <td>7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>0</td>
+      </tr>
+    </table>
   </body>
 </html>
