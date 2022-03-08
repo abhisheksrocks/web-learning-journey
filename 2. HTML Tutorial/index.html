@@ -22,10 +22,18 @@
         e.g.  <input type='text'> (for textfields),
               <input type='checkbox'> (for checkboxes), etc.
 
-        -> input also has an attribute called 'name', which is used as the KEY(like KEY-VALUE pair) when the data is sent to servers.
+        -> input also has an attribute called 'name', which is used as the
+          KEY(like KEY-VALUE pair) when the data is sent to servers.
 
         -> like all other tags, it also has 'id' attribute which is used to access it,
           or to move to highlight it.
+
+        -> it also has an attribute called 'value' which can be used to hold a
+         pre-existing value in the element(if the type supports it)
+
+        -> it also has an attribute called 'placeholder' which is similar to value,
+         but is much better suitable for a placholder text which only gives an
+         indication to the user on what to write in the input.
       
       <label> is used as the label for another form element(like <input>).
       If we specify the 'for' attribute, which holds the id of the tag for which we
@@ -33,16 +41,42 @@
      -->
     <form action="" method="">
       <label for="nameId">Username</label>
-      <input type="text" name="apiName" id="nameId" />
+      <input
+        type="text"
+        name="apiName"
+        id="nameId"
+        placeholder="Write your name here"
+      />
       <br />
       <label for="passwordId">Password</label>
       <input type="password" name="apiPassword" id="passwordId" />
       <br />
       <input type="submit" />
+      <!--
+        If you want custom submit TEXT
+        <input type="submit" value="MY SUBMIT TEXT" />
+      -->
+      <br />
+      <br />
+      <br />
       <!-- 
-        Another way to write this with alignment.
+        Other input types
+      -->
+      <h1>Other types</h1>
+
+      <!--
+        Provides some default email validation, but should be considered
+        as a really good one. So must create your own in real world projects.
+      -->
+      <label for="emailID">Email</label>
+      <input type="email" name="apiEmail" id="emailID" value="default value" />
+      <br />
+      <br />
+      <!-- 
+        Another way to write this with better alignment is by using tables.
        -->
-      <!-- <table>
+      <!--
+      <table>
         <tr>
           <td><label for="nameId">Username</label></td>
           <td><input type="text" name="apiName" id="nameId" /></td>
@@ -54,7 +88,8 @@
         <tr>
           <td><input type="submit" /></td>
         </tr>
-      </table> -->
+      </table>
+      -->
     </form>
   </body>
 </html>
