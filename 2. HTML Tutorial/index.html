@@ -7,89 +7,75 @@
     <title>Home Page</title>
   </head>
   <body>
-    <!-- 
-      <form> as the name suggests, is used with form data.
-
-      'action' attribute is used to specify the end-address(endpoint)
-      through with communication will happen.
-
-      'method' attribute in form is used to specify HOW the data is transferred,
-      i.e. GET('get')/POST('post'). By default it takes get
-
-      <input> is used to provide different kinds of inputs, like textfields, submit
-      button, checkbox, etc. We specify the type of input we want using the 'type'
-      attribute in <input>.
-        e.g.  <input type='text'> (for textfields),
-              <input type='checkbox'> (for checkboxes), etc.
-
-        -> input also has an attribute called 'name', which is used as the
-          KEY(like KEY-VALUE pair) when the data is sent to servers.
-
-        -> like all other tags, it also has 'id' attribute which is used to access it,
-          or to move to highlight it.
-
-        -> it also has an attribute called 'value' which can be used to hold a
-         pre-existing value in the element(if the type supports it)
-
-        -> it also has an attribute called 'placeholder' which is similar to value,
-         but is much better suitable for a placholder text which only gives an
-         indication to the user on what to write in the input.
-      
-      <label> is used as the label for another form element(like <input>).
-      If we specify the 'for' attribute, which holds the id of the tag for which we
-      are using this label for, then clicking on this label will highlight that element.
-     -->
+    <h2>Other form options</h2>
     <form action="" method="">
-      <label for="nameId">Username</label>
-      <input
-        type="text"
-        name="apiName"
-        id="nameId"
-        placeholder="Write your name here"
-      />
+      <h3>Checkboxes</h3>
+      <!--
+        Value refers to the value that is sent to the server. So it is NOT 'Value 1' that
+        is sent to the server, but 'value1'. Like:-
+        
+        apiCheckbox=value2
+      -->
+      <input type="checkbox" name="apiCheckbox" id="" value="value1" />Value 1
+      <input type="checkbox" name="apiCheckbox" id="" value="value2" />Value 2
+      <input type="checkbox" name="apiCheckbox" id="" value="value3" />Value 3
       <br />
-      <label for="passwordId">Password</label>
-      <input type="password" name="apiPassword" id="passwordId" />
+      <br />
+      <h3>Radio Buttons</h3>
+      <!--
+        Radio buttons are meant to be used when we just want one selection from a list of
+        values. To do that, radio make use of 'name' attribute. So MAKE SURE, that 'name'
+        is never empty when using radio buttons.
+
+        Value refers to the value that is sent to the server. So it is NOT 'Value 1' that
+        is sent to the server, but 'value1'. Like:-
+
+        apiRadio=value2
+      -->
+      <input type="radio" name="apiRadio" id="" value="value1" />Value 1
+      <input type="radio" name="apiRadio" id="" value="value2" />Value 2
+      <input type="radio" name="apiRadio" id="" value="value3" />Value 3
+      <br />
+      <br />
+      <h3>Dropdown selection</h3>
+      <!--
+        If the list of values to choose from is long, radio is not a great option then.
+        In that case, one can make use of <select> tag which is basically Dropdown
+        selection.
+
+        Same as before, here as well, we have 'name' and 'value' attribute, which serves
+        for similar purposes.
+      -->
+      <select name="apiDropdown" id="">
+        <option value="value1">Value 1</option>
+        <option value="value2">Value 2</option>
+        <option value="value3">Value 3</option>
+        <option value="value4">Value 4</option>
+      </select>
+      <br />
+      <br />
+      <h3>TextArea</h3>
+      <!--
+        Sometimes we want a whole paragraph of text from a user. In such case, it is
+        NOT RECOMMENDED to make use of <input type='text'>, but instead one should go with
+        <textarea> tag instead.
+
+        Similar to <input>, this also supports 'placeholder' attribute, and also for
+        default value, one can simply write it b/w the stating and the closing tag.
+
+        Make sure to write 'name' attribute for sending data to the server.
+
+        DOESN'T SUPPORT other tags inside textarea:-
+
+        ❌<textarea name="apiTextarea" id="" cols="30" rows="10"><p>Default Value</p></textarea>
+        ✅<textarea name="apiTextarea" id="" cols="30" rows="10">Default Value</textarea>
+      -->
+      <textarea name="apiTextarea" id="" cols="30" rows="10">
+Default Value</textarea
+      >
+
       <br />
       <input type="submit" />
-      <!--
-        If you want custom submit TEXT
-        <input type="submit" value="MY SUBMIT TEXT" />
-      -->
-      <br />
-      <br />
-      <br />
-      <!-- 
-        Other input types
-      -->
-      <h1>Other types</h1>
-
-      <!--
-        Provides some default email validation, but should be considered
-        as a really good one. So must create your own in real world projects.
-      -->
-      <label for="emailID">Email</label>
-      <input type="email" name="apiEmail" id="emailID" value="default value" />
-      <br />
-      <br />
-      <!-- 
-        Another way to write this with better alignment is by using tables.
-       -->
-      <!--
-      <table>
-        <tr>
-          <td><label for="nameId">Username</label></td>
-          <td><input type="text" name="apiName" id="nameId" /></td>
-        </tr>
-        <tr>
-          <td><label for="passwordId">Password</label></td>
-          <td><input type="password" name="apiPassword" id="passwordId" /></td>
-        </tr>
-        <tr>
-          <td><input type="submit" /></td>
-        </tr>
-      </table>
-      -->
     </form>
   </body>
 </html>
