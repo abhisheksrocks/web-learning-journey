@@ -5,12 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Tutorial</title>
+    <!--
+          Internal CSS Example
+    -->
+    <style>
+      h1 {
+        color: red;
+        font-size: 3rem;
+      }
+      h2 {
+        color: blueviolet;
+        font-size: 2rem;
+      }
+    </style>
   </head>
   <body>
+    <h1>Heading 1</h1>
+    <h1>Heading 2</h1>
     <!--
-          Inline CSS Example
+        Inline CSS takes precedence over internal css in any case.
     -->
-    <h1 style="color: red; font-size: 3rem">Hello World</h1>
-    <h2 style="color: gray; font-size: 2rem">Hello Again</h2>
+    <h1 style="color: green">Heading 3</h1>
+    <h2>Sub-heading 1</h2>
+    <h2>Sub-heading 2</h2>
+    <h2>Sub-heading 3</h2>
   </body>
 </html>
