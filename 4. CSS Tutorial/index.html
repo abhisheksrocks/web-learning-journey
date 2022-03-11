@@ -5,54 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Tutorial</title>
-    <!--
-          External CSS Example
-    -->
-    <!--
-      ! DON'T USE BOTH Internal CSS and External CSS for the same file.
-      ! The result is sometimes ambiguous:-
-      ! If we write <link> for stylesheet after the <style>, the External css
-      ! takes precedence, but if I write it before <style>, internal css is
-      ! taking precedence.
-
-      * However, as per Stack Overflow, the precedence should be:--
-      * 1.  !important (this is a bit hackish though but it is the only way to
-      *     override an inline style. Try to avoid using this unless really
-      *     necessary). Example: p {color: blue !important; }
-      *
-      * 2.  Inline, such as <p class="redText" style="color: red;">CSS is
-      *     awesome</p>.In this example, the class is ignored if the redText class
-      *     declaration has already tried to define the property of color:. Other
-      *     properties can still be honored though.
-      *
-      * 3.  Internal styles - those written inside the <head><style> section of
-      *     an html page.
-      *
-      * 4.  External stylesheet which defines styles. Your html document must have
-      *     a link to this sheet in order to use it. Example, again inside the <head>
-      *     section is: <link rel="stylesheet" type="text/css" href="mystyle.css" />
-      
-      source:-
-      https://stackoverflow.com/questions/6749569/css-which-takes-precedence-inline-or-the-class
-
-    -->
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      h1 {
-        color: red;
-        font-size: 3rem;
-      }
-    </style>
   </head>
   <body>
     <h1>Heading 1</h1>
-    <h1>Heading 2</h1>
-    <!--
-        Inline CSS takes precedence over internal css in any case.
-    -->
-    <h1 style="color: green">Heading 3</h1>
-    <h2>Sub-heading 1</h2>
-    <h2>Sub-heading 2</h2>
-    <h2>Sub-heading 3</h2>
+    <h2>Heading 2</h2>
+    <p>Paragraph</p>
   </body>
 </html>

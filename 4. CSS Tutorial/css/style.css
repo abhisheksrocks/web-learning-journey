@@ -1,43 +1,10 @@
-h2 {
-  color: pink;
-  font-size: 2.5rem;
+/* Elment Selector */
+h1 {
+  color: rebeccapurple;
 }
-/* CSS naming conventions*/
-/** considering above example **/
-
-/* 
-  1. CSS Rule:-
-
-  h2 {
-    color: pink;
-    font-size: 2.5rem;
-  }
-
-  -------------------------
-  2. selector:-
-  
-  h2
-  
-  -------------------------
-  3. Declaration block:-
-  
-  {
-    color: pink;
-    font-size: 2.5rem;
-  }
-
-  -------------------------
-  4. property:-
-
-  color
-
-  -------------------------
-  5. value:-
-  
-  pink
-  
-  -------------------------
-  6. declaration
-
-  color: pink;
- */
+h2 {
+  color: cornflowerblue;
+}
+p {
+  color: darkorange;
+}
