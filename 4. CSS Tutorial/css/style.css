@@ -1,8 +1,43 @@
-h1 {
-  color: chocolate;
-  font-size: 5rem;
-}
 h2 {
   color: pink;
   font-size: 2.5rem;
 }
+/* CSS naming conventions*/
+/** considering above example **/
+
+/* 
+  1. CSS Rule:-
+
+  h2 {
+    color: pink;
+    font-size: 2.5rem;
+  }
+
+  -------------------------
+  2. selector:-
+  
+  h2
+  
+  -------------------------
+  3. Declaration block:-
+  
+  {
+    color: pink;
+    font-size: 2.5rem;
+  }
+
+  -------------------------
+  4. property:-
+
+  color
+
+  -------------------------
+  5. value:-
+  
+  pink
+  
+  -------------------------
+  6. declaration
+
+  color: pink;
+ */
