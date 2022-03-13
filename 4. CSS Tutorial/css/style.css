@@ -1,13 +1,14 @@
-/** CSS Types **/
 /*
-  Elment Selector
+  Grouping Selectors
 */
-h1 {
-  color: rebeccapurple;
+body {
+  /*
+    If we want to have all elements of [body] to be of color red.
+  */
+  color: red;
 }
+
+h1,
 h2 {
-  color: cornflowerblue;
-}
-p {
-  color: darkorange;
+  color: blue;
 }
