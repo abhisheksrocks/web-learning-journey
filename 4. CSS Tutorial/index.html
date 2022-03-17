@@ -8,8 +8,34 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Heading 1</h1>
-    <h2>Heading 2</h2>
-    <p>Paragraph</p>
+    <h1 id="heading1">Heading 1</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quae natus
+      ut eos quidem praesentium iste maiores, earum nemo quam.
+    </p>
+    <!--
+      ! It is not advised to use multiple IDs with same name, like:-
+      !     <h1 id="heading1">Heading 2</h1>
+
+      ? Why?
+      * SHORT ANSWER
+      This is considered bad practice as it defies the W3C spec.
+
+      OR
+
+      * LONG ANSWER
+      Because it is a fragment identifier that can be hooked with an HREF.
+      like:-
+          <a href="#heading1">Move to heading 1</a>
+
+      Imagine the confusion over which one to hook if there is more than one id with same name.
+    -->
+    <h1>Heading 2</h1>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis distinctio
+      necessitatibus reiciendis maxime facilis quisquam quod adipisci
+      praesentium amet, porro neque sed quia id dolor. Reiciendis soluta at
+      maxime explicabo.
+    </p>
   </body>
 </html>

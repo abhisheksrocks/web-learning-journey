@@ -1,14 +1,7 @@
 /*
-  Grouping Selectors
+  ID Selectors
 */
-body {
-  /*
-    If we want to have all elements of [body] to be of color red.
-  */
-  color: red;
-}
-
-h1,
-h2 {
-  color: blue;
+#heading1 {
+  color: pink;
+  background: aquamarine;
 }
