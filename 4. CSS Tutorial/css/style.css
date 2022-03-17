@@ -1,10 +1,18 @@
 /*
-  Class Selectors
+  <div> and <span>
 */
-.green {
-  color: green;
+.header {
+  color: cadetblue;
 }
 
-.red {
-  color: red;
+.heading {
+  font-style: italic;
+}
+
+.subheading {
+  background: palegoldenrod;
+}
+
+span {
+  font-weight: bold;
 }

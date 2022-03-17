@@ -9,14 +9,38 @@
   </head>
   <body>
     <!--
-      This is not a good naming convention for class.
-      But for now, it's okay.
+      We use <div> when we have a block of multiple elements and we want
+      to apply the same style all of them.
+
+      It's a block element. Using this, in turn will have its content
+      start from a new line.
     -->
-    <h1 class="green">I'm green</h1>
-    <h1 class="red">I'm red</h1>
-    <h1 class="green">I'm green</h1>
-    <h1 class="red">I'm red</h1>
-    <h1 class="green">I'm green</h1>
-    <h1 class="red">I'm red</h1>
+    <!--
+      We can have multiple classs names seperated by space
+    -->
+    <div class="header heading">
+      <h1>Heading 1</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
+        reprehenderit nam veniam, voluptate nobis possimus culpa dolor amet
+        temporibus repudiandae. Eaque similique, atque corrupti tempora facere
+        consequatur numquam illo!
+      </p>
+    </div>
+    <div class="header subheading">
+      <h1>Heading 2</h1>
+      <!--
+        We use <span> when we want to style inside the content of an element.
+        
+        It's an inline element. Using this, WON'T have its content start from
+        a new line.
+      -->
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus impedit
+        reprehenderit nam veniam, <span>voluptate nobis possimus</span> culpa
+        dolor <span>amet temporibus repudiandae.</span> Eaque similique, atque
+        corrupti tempora facere consequatur numquam illo!
+      </p>
+    </div>
   </body>
 </html>
