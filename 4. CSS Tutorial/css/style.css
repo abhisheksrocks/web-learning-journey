@@ -1,7 +1,10 @@
 /*
-  ID Selectors
+  Class Selectors
 */
-#heading1 {
-  color: pink;
-  background: aquamarine;
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
 }
