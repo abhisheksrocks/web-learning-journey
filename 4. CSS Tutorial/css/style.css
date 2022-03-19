@@ -1,10 +1,13 @@
 /*
-  Specificity
-*/
-.paragraph {
-  color: blue;
-}
+  Universal selector
+  ------------------
 
-p {
-  color: red;
+  As the name suggests, it applies declaration inside it to all the elements.
+
+  It is different than applying your rules to <html> element. As in this case,
+  all the rules are applied to all child elements, whereas in the other case,
+  some property like "border" won't be applied to it's decendant elements.
+*/
+* {
+  border: 3px solid black;
 }
