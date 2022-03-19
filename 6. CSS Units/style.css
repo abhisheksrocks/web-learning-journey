@@ -1,5 +1,5 @@
 /*
-    Relative Values - 'em'
+    Relative Values - 'rem'
 
     This is useful when we want to have a text size flow such that
     all the fonts are dependent on a base text size.
@@ -11,20 +11,27 @@
     So, 1em = 16px, 2em = 32px, etc. You can test this by changing the
     default font size from browser settings, then search for 'font size'.
 
-    * With 'em', if you change the font-size in the parent element, then
-    * all its decendents will have to have consider that as the base font
-    * size. 
+    * With 'rem', if you change the font-size in the ROOT(<html>) element, then
+    * all its decendents will consider that as the base font size. 
 
-    Try it by uncommenting 'div' declaration block below.
+    Uncommenting 'div' declaration block below WON'T CHANGE ANYTHING here, as
+    it is not the root element.
+
+    HOWEVER, uncommenting 'html' block below WILL CHANGE the font size, as it
+    is the root element.
 */
 .absolute {
   font-size: 32px;
 }
 
 .relative {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 /* div {
+  font-size: 30px;
+} */
+
+/* html {
   font-size: 8px;
 } */
