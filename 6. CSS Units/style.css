@@ -1,17 +1,30 @@
 /*
-    Relative Values - Percent
+    Relative Values - 'em'
 
-    As you can see for the given example, the '.inner' (i.e. child) element
-    has a 50% width and 50% height of '.outer' width and height.
+    This is useful when we want to have a text size flow such that
+    all the fonts are dependent on a base text size.
+    
+    * It is important to note that if no base font-size is mentioned
+    * by the developer, the browser also has a default base font-size
+    * which is then considered.
+        By default, chrome browser have a base text size of 16px.
+    So, 1em = 16px, 2em = 32px, etc. You can test this by changing the
+    default font size from browser settings, then search for 'font size'.
+
+    * With 'em', if you change the font-size in the parent element, then
+    * all its decendents will have to have consider that as the base font
+    * size. 
+
+    Try it by uncommenting 'div' declaration block below.
 */
-.inner {
-  width: 50%;
-  height: 50%;
-  background: red;
+.absolute {
+  font-size: 32px;
 }
 
-.outer {
-  width: 400px;
-  height: 400px;
-  background: royalblue;
+.relative {
+  font-size: 2em;
 }
+
+/* div {
+  font-size: 8px;
+} */
