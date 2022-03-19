@@ -1,37 +1,32 @@
 /*
-    Relative Values - 'rem'
+    Relative Values - vh and vw
 
-    This is useful when we want to have a text size flow such that
-    all the fonts are dependent on a base text size.
-    
-    * It is important to note that if no base font-size is mentioned
-    * by the developer, the browser also has a default base font-size
-    * which is then considered.
-        By default, chrome browser have a base text size of 16px.
-    So, 1em = 16px, 2em = 32px, etc. You can test this by changing the
-    default font size from browser settings, then search for 'font size'.
+    vh -> view-height
+    vw -> view-width
 
-    * With 'rem', if you change the font-size in the ROOT(<html>) element, then
-    * all its decendents will consider that as the base font size. 
-
-    Uncommenting 'div' declaration block below WON'T CHANGE ANYTHING here, as
-    it is not the root element.
-
-    HOWEVER, uncommenting 'html' block below WILL CHANGE the font size, as it
-    is the root element.
+    50vh -> means 50 % of view height
+    150vw -> means 150 % of view width
 */
-.absolute {
-  font-size: 32px;
+
+/* --------------------------------------------------------
+    Below body declaration block is just there to remove any
+    browser default styles.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --------------------------------------------------------- */
+
+.box1 {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
 }
 
-.relative {
-  font-size: 2rem;
+.box2 {
+  width: 50vw;
+  height: 50vh;
+  background: red;
 }
-
-/* div {
-  font-size: 30px;
-} */
-
-/* html {
-  font-size: 8px;
-} */
