@@ -1,18 +1,10 @@
 /*
-  <div> and <span>
+  Inheritance
 */
-.header {
-  color: cadetblue;
+body {
+  color: royalblue;
 }
 
-.heading {
-  font-style: italic;
-}
-
-.subheading {
-  background: palegoldenrod;
-}
-
-span {
-  font-weight: bold;
+div {
+  color: chocolate;
 }
