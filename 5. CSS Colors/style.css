@@ -1,0 +1,56 @@
+/*
+  CSS Colors
+*/
+p {
+  color: black;
+  /*
+    Color name
+  
+    Get the whole list of accepted names:
+    https://www.w3schools.com/colors/colors_names.asp
+    */
+}
+
+h1 {
+  color: rgb(100, 200, 50);
+  /* RGB values (r,g,b)*/
+}
+
+h2 {
+  color: rgba(150, 14, 23, 0.5);
+  /*
+    RGB values with opacity.
+    'A' in RGBA stands for 'alpha'
+    (r,g,b, a)
+  
+    a ranges from 0 - 1
+    */
+}
+
+div {
+  color: #ffffff;
+  /* Hex value #RRGGBB */
+}
+
+.footer {
+  color: #ffffff45;
+  /*
+    Hex value with Opacity
+    #RRGGBBAA
+    AA ranges from 00 -> FF
+    */
+}
+
+#top {
+  color: #000;
+  /*
+      Short hand for writing hex color
+      like:
+      #000 instead of #000000
+      #fff instead of #ffffff
+      #ff0 instead of #ffff00
+  
+      More resource:
+      https://university.webflow.com/lesson/color-values-hex-rgba-color-names
+     */
+}
