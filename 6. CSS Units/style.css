@@ -1,9 +1,17 @@
 /*
-    Working with pixels.
+    Relative Values - Percent
+
+    As you can see for the given example, the '.inner' (i.e. child) element
+    has a 50% width and 50% height of '.outer' width and height.
 */
-h1 {
-  font-size: 60px;
-  width: 200px;
-  height: 500px;
+.inner {
+  width: 50%;
+  height: 50%;
+  background: red;
+}
+
+.outer {
+  width: 400px;
+  height: 400px;
   background: royalblue;
 }
