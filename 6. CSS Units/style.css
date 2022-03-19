@@ -1,16 +1,9 @@
 /*
-    Relative Values - vh and vw
+    calc() function
 
-    vh -> view-height
-    vw -> view-width
-
-    50vh -> means 50 % of view height
-    150vw -> means 150 % of view width
-*/
-
-/* --------------------------------------------------------
-    Below body declaration block is just there to remove any
-    browser default styles.
+    Use this to perform math operations ( + , - , *, /)
+    It CAN BE USED between two different types of values
+    (see .box2 decoration block below)
 */
 body {
   margin: 0;
@@ -20,13 +13,22 @@ body {
 /* --------------------------------------------------------- */
 
 .box1 {
-  width: 100vw;
-  height: 100vh;
+  height: 100px;
   background: blue;
 }
 
 .box2 {
-  width: 50vw;
-  height: 50vh;
+  /*
+    Make sure to write the calc() function properly:-
+
+    Correct:-
+    calc(100vh - 100px);
+
+    Incorrect:-
+    calc(100vh-100px);
+    calc(100vh- 100px);
+    calc(100vh -100px);
+  */
+  height: calc(100vh - 100px);
   background: red;
 }
