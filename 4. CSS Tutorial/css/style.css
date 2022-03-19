@@ -1,15 +1,7 @@
 /*
-  Last Rule
-  -----------
-
-  This states that if there are two rules for the same element,
-  with the same property, then the rule which comes later will
-  take priority.
-
-  Like in the following example, the "color: red; " declaration will take
-  priority, as it comes later(i.e. last).
+  Specificity
 */
-p {
+.paragraph {
   color: blue;
 }
 
