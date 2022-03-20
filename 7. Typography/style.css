@@ -4,12 +4,25 @@
   Using google fonts
 */
 h1 {
-  font-family: "Yesteryear", cursive;
-  font-weight: 800;
-  text-align: center;
+  text-decoration: line-through;
+  text-transform: uppercase;
 }
-p {
-  font-family: "Lato", sans-serif;
-  text-align: left; /* Default one */
-  text-indent: 200px; /* Starts the first line after an indent */
+#one {
+  text-decoration: underline;
+  word-spacing: 100px;
+}
+
+#two {
+  text-decoration: overline;
+  letter-spacing: 10px;
+}
+
+#three {
+  line-height: 10px;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none; /* Removes the underline from <a> */
+  text-transform: lowercase;
 }
