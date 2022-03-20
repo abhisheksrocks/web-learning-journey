@@ -1,13 +1,15 @@
+/* 1. Importing google fonts from CSS*/
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Yesteryear&family=Roboto:wght@700&display=swap");
 /*
-  Font stack:-
-  font-family: highest priority, ...., lowest priority
-
-  Generic Font Family:-
-  serif, sans-serif, cursive, fantasy, monospace
+  Using google fonts
 */
 h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Yesteryear", cursive;
+  font-weight: 800;
+  text-align: center;
 }
 p {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Lato", sans-serif;
+  text-align: left; /* Default one */
+  text-indent: 200px; /* Starts the first line after an indent */
 }
