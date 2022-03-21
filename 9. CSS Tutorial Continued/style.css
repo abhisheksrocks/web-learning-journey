@@ -1,27 +1,30 @@
 /*
-    Block element, respect top and bottom padding/margin.
-    
-    But inline elements don't.
-    Inline elements only respect left and right padding/margin.
+    Understanding box-sizing property
+    box-sizing: border-box; (BORDER + PADDING + CONTENT)
+    box-sizing: content-box; (CONTENT)
 */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+div {
+  /*
+    Whenever we are mentioning height or width, by that, we mean
+    the dimension of the actual content (NOT INCLUDING PADDING)
+  */
+  height: 200px;
+  width: 200px;
+  border: 20px solid black;
+  margin-bottom: 10px;
+  padding: 20px;
 }
 
-/* The following specifies all <li> that is INSIDE <ul> */
-ul li {
-  list-style-type: none; /* To style how the list should be displayed */
+#box1 {
+  background: rebeccapurple;
+  box-sizing: border-box; /* BORDER + PADDING + CONTENT */
+  /*
+    By mentioning 'box-sizing: border-box;' we mean that the
+    height and width should also include the border and
+    the padding, NOT JUST THE CONTENT!
+  */
 }
 
-/* The following specifies all <a> that is INSIDE <li> that is INSIDE <ul> */
-ul li a {
-  background: black;
-  text-decoration: none;
-  color: orange;
-  padding: 10px;
-  margin: 10px;
-  display: block; /* Comment this out to see the difference */
+#box2 {
+  background: aquamarine;
 }
