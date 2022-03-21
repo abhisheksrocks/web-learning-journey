@@ -1,30 +1,21 @@
 /*
-    Understanding box-sizing property
-    box-sizing: border-box; (BORDER + PADDING + CONTENT)
-    box-sizing: content-box; (CONTENT)
+    display: inline-block;
 */
-div {
-  /*
-    Whenever we are mentioning height or width, by that, we mean
-    the dimension of the actual content (NOT INCLUDING PADDING)
-  */
-  height: 200px;
-  width: 200px;
-  border: 20px solid black;
-  margin-bottom: 10px;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  background: black;
+  color: orangered;
   padding: 20px;
-}
-
-#box1 {
-  background: rebeccapurple;
-  box-sizing: border-box; /* BORDER + PADDING + CONTENT */
+  margin: 20px;
+  display: inline-block;
   /*
-    By mentioning 'box-sizing: border-box;' we mean that the
-    height and width should also include the border and
-    the padding, NOT JUST THE CONTENT!
+    As you know inline element has limited support for padding and margin,
+    (top-bottom issue). But however, you can use 'display: inline-block;'
+    to apply those properties. 
   */
-}
-
-#box2 {
-  background: aquamarine;
 }
