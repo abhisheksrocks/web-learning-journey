@@ -1,26 +1,27 @@
 /*
-    Horizontally align elements
+    Block element, respect top and bottom padding/margin.
+    
+    But inline elements don't.
+    Inline elements only respect left and right padding/margin.
 */
 
-body {
-  text-align: center;
-  /* To align not just the block but also the text inside the elment */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.block {
-  background: pink;
-  width: 250px;
-  margin: 20px auto;
-  /*
-    'auto' in the above case(i.e. left and right) acts like a 'maximum posible',
-    so in the above case for both left and right,
-    the margin becomes maximum possible, thereby
-    aligning the element at the center.
-
-    However for (top-bottom), using 'auto' will make the margin 0.
-  */
+/* The following specifies all <li> that is INSIDE <ul> */
+ul li {
+  list-style-type: none; /* To style how the list should be displayed */
 }
 
-.inline {
-  background: #7fffd4;
+/* The following specifies all <a> that is INSIDE <li> that is INSIDE <ul> */
+ul li a {
+  background: black;
+  text-decoration: none;
+  color: orange;
+  padding: 10px;
+  margin: 10px;
+  display: block; /* Comment this out to see the difference */
 }
