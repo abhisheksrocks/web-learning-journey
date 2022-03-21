@@ -1,0 +1,16 @@
+div {
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+#big-img {
+  background: url(./big.jpeg);
+}
+
+#small-img {
+  background: url("./small.jpeg");
+}
+
+#folder-img {
+  background: url(img/folder-img.jpeg);
+}
