@@ -1,21 +1,29 @@
-/*
-    display: inline-block;
-*/
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+div {
+  background: orangered;
+  color: white;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
-a {
-  background: black;
-  color: orangered;
-  padding: 20px;
-  margin: 20px;
-  display: inline-block;
-  /*
-    As you know inline element has limited support for padding and margin,
-    (top-bottom issue). But however, you can use 'display: inline-block;'
-    to apply those properties. 
-  */
+#none {
+  display: none;
+  /* Completely removes the element from view */
+}
+
+#visibility {
+  visibility: hidden;
+  /* Simply hides the element, but the element is not removed from view */
+}
+
+#opacity-1 {
+  opacity: 1;
+}
+
+#opacity-5 {
+  opacity: 0.5;
+}
+
+#opacity-0 {
+  opacity: 0;
+  /* Same as 'visibility: hidden;' */
 }
