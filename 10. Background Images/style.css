@@ -1,29 +1,40 @@
-/*
-    background-attachment
-
-    'background-attachment: fixed;' is generally used in case,
-    when we want to show some sort of parallax effect in the website
-*/
-
-* {
-  margin: 0;
-}
-
 div {
-  min-height: 100vh;
-  font-size: 2em;
-  font-weight: bold;
-  color: darksalmon;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 10px;
 }
 
-.edge {
-  background: url(./img/folder-img.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
+#one {
+  background: linear-gradient(red, green);
 }
 
-.middle {
-  background: url(./big.jpeg);
-  background-size: cover;
-  background-attachment: fixed;
+#two {
+  background: linear-gradient(to right, red, green);
+}
+
+#three {
+  background: linear-gradient(to top right, red, green);
+}
+
+#four {
+  /*
+    I think the angle point is bottom left corner, and the angle sweeps
+    along the -x axis (clock-wise direction) or x-axis(clock-wise direction)
+  */
+  background: linear-gradient(180deg, red, green); /* Default (top to bottom) */
+  background: linear-gradient(0deg, red, green); /* bottom to top */
+  background: linear-gradient(-30deg, red, green);
+  background: linear-gradient(30deg, red, green);
+}
+
+#five {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
+}
+
+#six {
+  background: linear-gradient(
+    to bottom left,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 1)
+  );
 }
