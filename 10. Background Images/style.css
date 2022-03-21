@@ -7,11 +7,27 @@ div {
   background: url(./big.jpeg);
   background-size: contain; /* Make sure the whole image is contained, WITHOUT CHANGING ASPECT RATIO */
   background-size: cover; /* Tries to keep the whole image, CAN CHANGE ASPECT RATIO */
+  background-position: top; /* Positions the image to the top */
+  background-position: bottom;
+  background-position: left;
+  background-position: right;
+  background-position: center;
+  background-position: 50% 50%; /* Sort of like giving x,y coordinate */
+  background-position: 0% 0%; /* TOP LEFT */
+  background-position: 100% 100%; /* BOTTOM RIGHT */
 }
 
 #small-img {
   background: url("./small.jpeg");
-  background-size: cover; /* Tries to keep the whole image, CAN CHANGE ASPECT RATIO */
+  background-repeat: no-repeat;
+  background-position: top; /* Positions the image to the top */
+  background-position: bottom;
+  background-position: left;
+  background-position: right;
+  background-position: center;
+  background-position: 50% 50%; /* Sort of like giving x,y coordinate */
+  background-position: 0% 0%; /* TOP LEFT */
+  background-position: 100% 100%; /* BOTTOM RIGHT */
 }
 
 #folder-img {
