@@ -1,40 +1,30 @@
+* {
+  margin: 0px;
+}
+
 div {
-  height: 150px;
-  width: 150px;
-  margin-bottom: 10px;
+  min-height: 100vh;
 }
 
 #one {
-  background: linear-gradient(red, green);
+  background: url(./big.jpeg);
+  background-size: cover;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #two {
-  background: linear-gradient(to right, red, green);
-}
+  /* Shorthand for writing the same thing as above */
+  background: url(./big.jpeg) center/cover no-repeat scroll;
+  /* Other alterations to get an idea*/
+  background: url(./big.jpeg) center/cover scroll no-repeat;
+  background: url(./big.jpeg) center/cover scroll;
+  background: url(./big.jpeg) center/cover no-repeat;
+  background: url(./big.jpeg) center/cover;
+  /* background: url(<url>) <background-position>/<background-size> <other properties seperated by space> */
 
-#three {
-  background: linear-gradient(to top right, red, green);
-}
-
-#four {
-  /*
-    I think the angle point is bottom left corner, and the angle sweeps
-    along the -x axis (clock-wise direction) or x-axis(clock-wise direction)
-  */
-  background: linear-gradient(180deg, red, green); /* Default (top to bottom) */
-  background: linear-gradient(0deg, red, green); /* bottom to top */
-  background: linear-gradient(-30deg, red, green);
-  background: linear-gradient(30deg, red, green);
-}
-
-#five {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1));
-}
-
-#six {
-  background: linear-gradient(
-    to bottom left,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 1)
-  );
+  /* We can make a stack of background layer seperated by ','(first element at top) */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./big.jpeg) center/cover no-repeat scroll;
 }
