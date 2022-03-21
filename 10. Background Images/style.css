@@ -5,12 +5,20 @@ div {
 
 #big-img {
   background: url(./big.jpeg);
+  background-repeat: round; /* Make sure no image is cropped, changes image aspect ratio if required */
 }
 
 #small-img {
   background: url("./small.jpeg");
+  background-repeat: repeat; /* Default */
+  background-repeat: no-repeat; /* Doesn't repeat */
+  background-repeat: repeat-x; /* Repeats only over x direction */
+  background-repeat: repeat-y; /* Repeats only over y direction */
+  background-repeat: space; /* Make sure no image is cropped, puts space in between if required*/
+  background-repeat: round; /* Make sure no image is cropped, changes image aspect ratio if required */
 }
 
 #folder-img {
   background: url(img/folder-img.jpeg);
+  background-repeat: round; /* Make sure no image is cropped, changes image aspect ratio if required */
 }
