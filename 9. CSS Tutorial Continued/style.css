@@ -1,0 +1,9 @@
+.block {
+  background: pink;
+  display: inline;
+}
+
+.inline {
+  background: #7fffd4;
+  display: block;
+}
