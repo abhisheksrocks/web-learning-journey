@@ -1,9 +1,26 @@
+/*
+    Horizontally align elements
+*/
+
+body {
+  text-align: center;
+  /* To align not just the block but also the text inside the elment */
+}
+
 .block {
   background: pink;
-  display: inline;
+  width: 250px;
+  margin: 20px auto;
+  /*
+    'auto' in the above case(i.e. left and right) acts like a 'maximum posible',
+    so in the above case for both left and right,
+    the margin becomes maximum possible, thereby
+    aligning the element at the center.
+
+    However for (top-bottom), using 'auto' will make the margin 0.
+  */
 }
 
 .inline {
   background: #7fffd4;
-  display: block;
 }
