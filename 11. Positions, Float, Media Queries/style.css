@@ -3,7 +3,7 @@ div {
     If other position property is not given,
     this is what happens by default
   */
-  position: static;
+  position: relative;
 
   background: yellowgreen;
   margin-top: 40px;
@@ -16,24 +16,21 @@ div {
 
 .two {
   background: gray;
-  /* position: relative; */
-  /*
-    As this is parent element of .special (for the current case). Hence
-    '.special' position get aligned to this.
-
-    Uncomment position: relative; to see the difference
-  */
 }
 
 .special {
   background: lightcoral;
+}
 
+button {
+  position: fixed;
   /*
-    position: absolute; is actually RELATIVE to the its first ancestor which
-    has position: relative;. If it has no ancestor with position: relative;,
-    it becomes RELATIVE to the html only.
+    This is ONLY RELATIVE TO THE WHOLE SCREEN (viewport).
+
+    Generally used in navigation bars in websites.
   */
-  position: absolute;
-  top: 0px; /* Read it like 0px from top, towards bottom */
-  left: 0px; /* Read it like 0px from left, towards right */
+  top: 0;
+  right: 0;
+  padding: 10px 10px;
+  background: wheat;
 }
