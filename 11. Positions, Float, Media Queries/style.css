@@ -1,25 +1,23 @@
-* {
-  margin: 0;
-}
-
 div {
-  float: left;
-  height: 300px;
-  width: 33.333%;
+  /*
+    If other position property is not given,
+    this is what happens by default
+  */
+  position: static;
+
+  background: yellowgreen;
+  margin-top: 40px;
+  border: 3px solid blue;
 }
 
-.columnOne {
-  background-color: red;
+.one {
+  background: orangered;
 }
 
-.columnTwo {
-  background-color: blue;
+.two {
+  background: gray;
 }
 
-.columnThree {
-  background-color: green;
-}
-
-h1 {
-  clear: both;
+.special {
+  background: lightcoral;
 }
