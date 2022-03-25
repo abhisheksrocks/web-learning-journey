@@ -12,6 +12,16 @@ div {
 
 .one {
   background: orangered;
+  /*
+    Using position: relative; opens up 'top', 'left', 'right', 'bottom'
+    keys. Which we can use to modify the position of the element.
+    
+    This new position will RELATIVE to the default position
+    (i.e. position: static;)
+  */
+  position: relative;
+  left: 50%; /* Read it like 50% from the left, towards right */
+  top: 100px; /* Read it like 100px from the top, towards bottom */
 }
 
 .two {
