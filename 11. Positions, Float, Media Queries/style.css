@@ -1,36 +1,70 @@
+/*
+  Media Queries
+  --------------
+
+  You will see two things here:
+  max-width -> Think of it like 'width UPTO'
+  min-width -> Think of it like 'width STARTING FROM'
+*/
+
+/* 
+  Think of decoration outside media queries as base decoration.
+  (WHICH WILL BE APPLIED EVERYTIME NO MATTER THE CASE)
+
+  Whatever you write inside media queries only adds on top of that.
+*/
+
+body {
+  background: yellow;
+}
+
 div {
-  /*
-    If other position property is not given,
-    this is what happens by default
-  */
-  position: relative;
-
-  background: yellowgreen;
-  margin-top: 40px;
-  border: 3px solid blue;
+  background: blue;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: white;
 }
 
-.one {
-  background: orangered;
+/* i.e. screen with width from 576px to infinity */
+/*
+  If we instead write the following:-
+
+  '@media screen and (max-width: 576px) {'
+    
+  this will mean all screens from width 0px to 576px
+    
+  BUT, IF WE MAKE ANOTHER MEDIA QUERY LIKE THIS:-
+    
+  '@media screen and (max-width: 768px) {'
+
+  THIS WILL ALSO APPLY TO SCREEN (WITH THE ABOVE ONE).
+
+  as it also mean all screens from width 0px to 768px
+*/
+@media screen and (min-width: 576px) {
+  body {
+    background: red;
+  }
+
+  div {
+    background: green;
+    text-transform: lowercase;
+    font-size: 2rem;
+  }
 }
 
-.two {
-  background: gray;
-}
+/* i.e. screen with width from 768px to infinity */
+/* NOTE that for range (576px - 767px) above media query will take precedence */
+@media screen and (min-width: 768px) {
+  body {
+    background: blue;
+  }
 
-.special {
-  background: lightcoral;
-}
-
-button {
-  position: fixed;
-  /*
-    This is ONLY RELATIVE TO THE WHOLE SCREEN (viewport).
-
-    Generally used in navigation bars in websites.
-  */
-  top: 0;
-  right: 0;
-  padding: 10px 10px;
-  background: wheat;
+  div {
+    background: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #000;
+  }
 }
