@@ -12,22 +12,28 @@ div {
 
 .one {
   background: orangered;
-  /*
-    Using position: relative; opens up 'top', 'left', 'right', 'bottom'
-    keys. Which we can use to modify the position of the element.
-    
-    This new position will RELATIVE to the default position
-    (i.e. position: static;)
-  */
-  position: relative;
-  left: 50%; /* Read it like 50% from the left, towards right */
-  top: 100px; /* Read it like 100px from the top, towards bottom */
 }
 
 .two {
   background: gray;
+  /* position: relative; */
+  /*
+    As this is parent element of .special (for the current case). Hence
+    '.special' position get aligned to this.
+
+    Uncomment position: relative; to see the difference
+  */
 }
 
 .special {
   background: lightcoral;
+
+  /*
+    position: absolute; is actually RELATIVE to the its first ancestor which
+    has position: relative;. If it has no ancestor with position: relative;,
+    it becomes RELATIVE to the html only.
+  */
+  position: absolute;
+  top: 0px; /* Read it like 0px from top, towards bottom */
+  left: 0px; /* Read it like 0px from left, towards right */
 }
