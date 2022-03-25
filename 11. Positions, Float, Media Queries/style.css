@@ -1,15 +1,25 @@
-.floatLeft {
+* {
+  margin: 0;
+}
+
+div {
   float: left;
+  height: 300px;
+  width: 33.333%;
 }
-.floatRight {
-  float: right;
+
+.columnOne {
+  background-color: red;
 }
-.clearLeft {
-  clear: left;
+
+.columnTwo {
+  background-color: blue;
 }
-.clearRight {
-  clear: right;
+
+.columnThree {
+  background-color: green;
 }
-.clearBoth {
+
+h1 {
   clear: both;
 }
