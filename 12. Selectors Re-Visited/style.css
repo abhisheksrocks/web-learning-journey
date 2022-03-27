@@ -1,13 +1,14 @@
-h1 {
-  color: red;
+#para1::first-letter {
+  font-size: 175%;
+  font-weight: bold;
+  display: block;
+  padding-top: 4px;
+  padding-right: 4px;
+  float: left;
 }
 
-/* All <h1> that are the descendant of <div> */
-div h1 {
-  color: blue;
-}
-
-/* All <h1> that are the direct child of <div> */
-div > h1 {
-  color: green;
+#para2::first-line {
+  color: orangered;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 2px;
 }
