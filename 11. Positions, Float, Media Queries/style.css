@@ -1,70 +1,45 @@
 /*
-  Media Queries
-  --------------
+  Z-INDEX
 
-  You will see two things here:
-  max-width -> Think of it like 'width UPTO'
-  min-width -> Think of it like 'width STARTING FROM'
+  Think of z-index like a way to organize element in a stack.
+  
+  -> The higher the z-index, the higher the element(on the top).
+  
+  -> If two element have same z-index, they will arrange them-selves
+  in the order they are written in html code(the lowest written element
+  at the top). See #img1 and #img3 for example.
+
+  -> The default z-index for an element is 0.
+
+  ! REQUIREMENTS
+  
+  ! -> For an element to support z-index, it must use "position: absolute;"
+  ! or "position: fixed;" or "position: sticky". 
+  ! IT DOES NOT WORK WITH "position: static;" OR "position: relative;"
 */
-
-/* 
-  Think of decoration outside media queries as base decoration.
-  (WHICH WILL BE APPLIED EVERYTIME NO MATTER THE CASE)
-
-  Whatever you write inside media queries only adds on top of that.
-*/
-
-body {
-  background: yellow;
-}
 
 div {
-  background: blue;
-  text-align: center;
-  text-transform: capitalize;
-  text-decoration: underline;
-  color: white;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: absolute;
 }
 
-/* i.e. screen with width from 576px to infinity */
-/*
-  If we instead write the following:-
-
-  '@media screen and (max-width: 576px) {'
-    
-  this will mean all screens from width 0px to 576px
-    
-  BUT, IF WE MAKE ANOTHER MEDIA QUERY LIKE THIS:-
-    
-  '@media screen and (max-width: 768px) {'
-
-  THIS WILL ALSO APPLY TO SCREEN (WITH THE ABOVE ONE).
-
-  as it also mean all screens from width 0px to 768px
-*/
-@media screen and (min-width: 576px) {
-  body {
-    background: red;
-  }
-
-  div {
-    background: green;
-    text-transform: lowercase;
-    font-size: 2rem;
-  }
+#img1 {
+  background-image: linear-gradient(#000000, #000000);
+  top: 5%;
+  left: 5%;
+  z-index: 0; /* DEFAULT */
 }
-
-/* i.e. screen with width from 768px to infinity */
-/* NOTE that for range (576px - 767px) above media query will take precedence */
-@media screen and (min-width: 768px) {
-  body {
-    background: blue;
-  }
-
-  div {
-    background: white;
-    text-transform: uppercase;
-    font-size: 2rem;
-    color: #000;
-  }
+#img2 {
+  background-image: linear-gradient(#2844ab, #2844ab);
+  top: 10%;
+  left: 10%;
+  z-index: -1;
+}
+#img3 {
+  background-image: linear-gradient(#62bb49, #62bb49);
+  top: 15%;
+  left: 15%;
+  z-index: 0; /* DEFAULT */
 }
