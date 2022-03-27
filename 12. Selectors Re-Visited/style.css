@@ -1,14 +1,12 @@
-#para1::first-letter {
-  font-size: 175%;
-  font-weight: bold;
-  display: block;
-  padding-top: 4px;
-  padding-right: 4px;
-  float: left;
+h1:hover {
+  color: olivedrab;
 }
 
-#para2::first-line {
-  color: orangered;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  letter-spacing: 2px;
+p:hover {
+  background-color: orangered;
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
 }
