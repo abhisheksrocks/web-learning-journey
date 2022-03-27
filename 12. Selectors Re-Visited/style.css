@@ -1,15 +1,16 @@
-a:link {
-  color: coral;
+/*
+  ':root' selector can be used to set some root property, like
+  base rem font-size and variables.
+*/
+
+:root {
+  font-size: 16px;
 }
 
-a:active {
-  color: red;
+.absolute {
+  font-size: 32px;
 }
 
-a:hover {
-  color: deeppink;
-}
-
-a:visited {
-  color: darkgoldenrod;
+.responsive {
+  font-size: 2rem;
 }
