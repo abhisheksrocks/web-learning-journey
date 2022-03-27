@@ -1,45 +1,102 @@
 /*
-  Z-INDEX
+  ::before and ::after pseudo elements
 
-  Think of z-index like a way to organize element in a stack.
-  
-  -> The higher the z-index, the higher the element(on the top).
-  
-  -> If two element have same z-index, they will arrange them-selves
-  in the order they are written in html code(the lowest written element
-  at the top). See #img1 and #img3 for example.
+  pseudo elements are basically used to put elements(for styling)
+  before, after or within another element. They not meant to put
+  meaningful content, but are more-or-less aimed towards styling of
+  the main element.
 
-  -> The default z-index for an element is 0.
+  for both ::before and ::after pseudo elements, 'content' field is
+  mandatory.
 
-  ! REQUIREMENTS
-  
-  ! -> For an element to support z-index, it must use "position: absolute;"
-  ! or "position: fixed;" or "position: sticky". 
-  ! IT DOES NOT WORK WITH "position: static;" OR "position: relative;"
+  ! <img> DOESN'T SUPPORT ::after or ::before as this element is the
+  ! content. However, there is a way to get around this. Just wrap it
+  ! inside a div, and use the pseudo elements with that(see below)
 */
 
-div {
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  position: absolute;
+p {
+  background-color: aquamarine;
+}
+
+p::before {
+  content: "p::before";
+  background-color: blueviolet;
+  display: block;
+}
+
+p::after {
+  content: "p::after";
+  background-color: blueviolet;
+  display: block;
 }
 
 #img1 {
-  background-image: linear-gradient(#000000, #000000);
-  top: 5%;
-  left: 5%;
-  z-index: 0; /* DEFAULT */
+  padding: 10px 10px;
+  background-color: brown;
 }
-#img2 {
-  background-image: linear-gradient(#2844ab, #2844ab);
-  top: 10%;
-  left: 10%;
+
+/*
+  As you can see, ::before and ::after doesn't work
+  with <img>
+*/
+
+#img1::before {
+  content: "img::before";
+}
+
+#img1::after {
+  content: "img::after";
+}
+
+div {
+  width: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div::before {
+  content: ""; /* Mandatory field*/
+
+  /* This 'absolute' considers 'div' as its parent */
+  position: absolute;
+
+  top: -20px;
+  left: -20px;
+
+  border: 2px solid #585858;
+
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
+div::after {
+  content: ""; /* Mandatory field*/
+
+  /* This 'absolute' considers 'div' as its parent */
+  position: absolute;
+
+  top: -10px;
+  left: -10px;
+
+  background-color: rgb(123, 123, 123);
+
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
-#img3 {
-  background-image: linear-gradient(#62bb49, #62bb49);
-  top: 15%;
-  left: 15%;
-  z-index: 0; /* DEFAULT */
+
+#img2 {
+  /*
+    ? Why 'display: block'? Here's why:-
+    * https://stackoverflow.com/questions/5804256/image-inside-div-has-extra-space-below-the-image
+
+    By default, an image is rendered inline, like a letter so it
+    sits on the same line that a, b, c and d sit on.
+    There is space below that line for the descenders you find on
+    letters like g, j, p and q.
+  */
+  display: block;
+  width: 100%;
+  height: 100%;
 }
