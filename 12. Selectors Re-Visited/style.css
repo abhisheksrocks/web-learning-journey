@@ -1,12 +1,15 @@
-h1:hover {
-  color: olivedrab;
+a:link {
+  color: coral;
 }
 
-p:hover {
-  background-color: orangered;
-  color: white;
+a:active {
+  color: red;
 }
 
 a:hover {
-  text-decoration: none;
+  color: deeppink;
+}
+
+a:visited {
+  color: darkgoldenrod;
 }
