@@ -1,0 +1,13 @@
+h1 {
+  color: red;
+}
+
+/* All <h1> that are the descendant of <div> */
+div h1 {
+  color: blue;
+}
+
+/* All <h1> that are the direct child of <div> */
+div > h1 {
+  color: green;
+}
