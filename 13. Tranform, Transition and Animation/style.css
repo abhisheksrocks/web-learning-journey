@@ -5,18 +5,18 @@ div {
 
 #div1 {
   background-color: red;
-  transform: scaleX(2);
-  /* Becomes twice as big along x direction */
+  transform: rotateX(45deg);
+  /* NOTICE THE WAY TO WRITE DEGREES */
 }
 
 #div2 {
   background-color: blue;
-  transform: scaleY(0.5);
-  /* Becomes half as small along y direction */
+  transform: rotateY(45deg);
 }
 
 #div3 {
   background-color: green;
-  transform: scale(0.5, 0.5);
-  /* Becomes 50% smaller */
+  transform: rotateZ(45deg);
+  /* which is same as */
+  transform: rotate(45deg);
 }
