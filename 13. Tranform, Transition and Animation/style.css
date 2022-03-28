@@ -5,20 +5,18 @@ div {
 
 #div1 {
   background-color: red;
-  /* 50% = 150px / 2 */
-  transform: translateX(50%);
-
-  /* Positive value: right side */
+  transform: scaleX(2);
+  /* Becomes twice as big along x direction */
 }
 
 #div2 {
   background-color: blue;
-  /* 50% = 150px / 2 */
-  transform: translateY(50%);
-  /* Positive value: bottom side */
+  transform: scaleY(0.5);
+  /* Becomes half as small along y direction */
 }
 
 #div3 {
   background-color: green;
-  transform: translate(calc(150px / 2), calc(150px / 2));
+  transform: scale(0.5, 0.5);
+  /* Becomes 50% smaller */
 }
