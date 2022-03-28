@@ -5,18 +5,19 @@ div {
 
 #div1 {
   background-color: red;
-  transform: rotateX(45deg);
-  /* NOTICE THE WAY TO WRITE DEGREES */
+  transform: skewX(20deg);
 }
 
 #div2 {
   background-color: blue;
-  transform: rotateY(45deg);
+  transform: skewY(20deg);
 }
 
 #div3 {
   background-color: green;
-  transform: rotateZ(45deg);
-  /* which is same as */
-  transform: rotate(45deg);
+
+  transform: skew(20deg);
+  /* which is same as skewX(20deg) */
+
+  transform: skew(20deg, 20deg);
 }
