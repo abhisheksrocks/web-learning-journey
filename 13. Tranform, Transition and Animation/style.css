@@ -1,0 +1,24 @@
+div {
+  height: 150px;
+  width: 150px;
+}
+
+#div1 {
+  background-color: red;
+  /* 50% = 150px / 2 */
+  transform: translateX(50%);
+
+  /* Positive value: right side */
+}
+
+#div2 {
+  background-color: blue;
+  /* 50% = 150px / 2 */
+  transform: translateY(50%);
+  /* Positive value: bottom side */
+}
+
+#div3 {
+  background-color: green;
+  transform: translate(calc(150px / 2), calc(150px / 2));
+}
