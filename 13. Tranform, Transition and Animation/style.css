@@ -13,6 +13,12 @@ div:hover {
 */
 .div1 {
   background-color: red;
+  transition-property: background;
+  transition-duration: 2s;
+  transition-delay: 2s;
+  /*
+    We can add delay before beginning the animation
+  */
 }
 
 .div2 {
@@ -25,12 +31,14 @@ div:hover {
 
 .div3 {
   background-color: green;
-  transition-property: background, border-radius;
   /*
-    We can mention multiple properties seperated by ','
-
-
-    And their duration as well seperated by ','
+    transition: transition-property transition-duration [transition-delay],
+                transition-property transition-duration [transition-delay], ...;
   */
-  transition-duration: 1s, 4s;
+  transition: background 2s 1s, border-radius 3s;
+
+  /* 
+    or for all properties
+  */
+  transition: all 2s 1s;
 }
