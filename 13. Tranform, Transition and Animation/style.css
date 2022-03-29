@@ -1,44 +1,38 @@
 div {
   height: 150px;
   width: 150px;
+  background-color: crimson;
+  margin: 15px;
+  transition: all 2s;
 }
 
 div:hover {
-  background-color: coral;
+  transform: translateX(100px);
 }
 
-/*
-  The only reason I have changed from IDs to classes,
-  is because #div1 has higher specifity than div:hover
-*/
-.div1 {
-  background-color: red;
-  transition-property: background;
-  transition-duration: 2s;
-  transition-delay: 2s;
-  /*
-    We can add delay before beginning the animation
-  */
+.default {
+  transition: all 2s;
 }
 
-.div2 {
-  background-color: blue;
+/* Also the default */
+.ease {
+  transition: all 2s ease;
+  /* or if we just want to put the animation curve */
+  transition-timing-function: ease;
 }
 
-.div3:hover {
-  border-radius: 50%;
+.linear {
+  transition-timing-function: linear;
 }
 
-.div3 {
-  background-color: green;
-  /*
-    transition: transition-property transition-duration [transition-delay],
-                transition-property transition-duration [transition-delay], ...;
-  */
-  transition: background 2s 1s, border-radius 3s;
+.ease-in {
+  transition-timing-function: ease-in;
+}
 
-  /* 
-    or for all properties
-  */
-  transition: all 2s 1s;
+.ease-out {
+  transition-timing-function: ease-out;
+}
+
+.ease-in-out {
+  transition-timing-function: ease-in-out;
 }
