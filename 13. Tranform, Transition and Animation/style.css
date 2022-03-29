@@ -19,14 +19,18 @@ div:hover {
   background-color: blue;
 }
 
+.div3:hover {
+  border-radius: 50%;
+}
+
 .div3 {
   background-color: green;
-  transition-property: background;
+  transition-property: background, border-radius;
   /*
-    This defines on which property do you want to affect the transition.
-    Transition is basically anything that animates. So in transition-property,
-    we write properties which want to have an animation on. The other property
-    (on which we don't apply the transition) will basically change instantly.
+    We can mention multiple properties seperated by ','
+
+
+    And their duration as well seperated by ','
   */
-  transition-duration: 1s;
+  transition-duration: 1s, 4s;
 }
