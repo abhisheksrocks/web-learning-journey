@@ -3,21 +3,30 @@ div {
   width: 150px;
 }
 
-#div1 {
+div:hover {
+  background-color: coral;
+}
+
+/*
+  The only reason I have changed from IDs to classes,
+  is because #div1 has higher specifity than div:hover
+*/
+.div1 {
   background-color: red;
-  transform: skewX(20deg);
 }
 
-#div2 {
+.div2 {
   background-color: blue;
-  transform: skewY(20deg);
 }
 
-#div3 {
+.div3 {
   background-color: green;
-
-  transform: skew(20deg);
-  /* which is same as skewX(20deg) */
-
-  transform: skew(20deg, 20deg);
+  transition-property: background;
+  /*
+    This defines on which property do you want to affect the transition.
+    Transition is basically anything that animates. So in transition-property,
+    we write properties which want to have an animation on. The other property
+    (on which we don't apply the transition) will basically change instantly.
+  */
+  transition-duration: 1s;
 }
