@@ -2,37 +2,41 @@ div {
   height: 150px;
   width: 150px;
   background-color: crimson;
-  margin: 15px;
-  transition: all 2s;
+  margin-bottom: 10px;
 }
 
-div:hover {
+.transition:hover {
   transform: translateX(100px);
+  transition: transform 1s linear;
 }
 
-.default {
-  transition: all 2s;
+.animation {
+  background-color: blue;
+  animation-name: myAnimationName;
+  animation-duration: 5s;
+  animation-iteration-count: 12;
+
+  /* Shorthand */
+  animation: myAnimationName 5s infinite;
 }
 
-/* Also the default */
-.ease {
-  transition: all 2s ease;
-  /* or if we just want to put the animation curve */
-  transition-timing-function: ease;
-}
+@keyframes myAnimationName {
+  0% {
+    transform: translateX(100px);
+  }
 
-.linear {
-  transition-timing-function: linear;
-}
+  50% {
+    transform: translateX(250px);
+    background-color: yellow;
+  }
 
-.ease-in {
-  transition-timing-function: ease-in;
-}
+  75% {
+    transform: translateY(-100px);
+    background-color: red;
+  }
 
-.ease-out {
-  transition-timing-function: ease-out;
-}
-
-.ease-in-out {
-  transition-timing-function: ease-in-out;
+  100% {
+    transform: translateY(-200px);
+    background-color: pink;
+  }
 }
