@@ -5,19 +5,13 @@ div {
   margin-bottom: 10px;
 }
 
-.transition:hover {
-  transform: translateX(100px);
-  transition: transform 1s linear;
-}
-
 .animation {
   background-color: blue;
-  animation-name: myAnimationName;
-  animation-duration: 5s;
-  animation-iteration-count: 12;
-
   /* Shorthand */
-  animation: myAnimationName 5s infinite;
+  animation: myAnimationName 5s 2;
+
+  /* Defines what values should be kept when the animation finishes */
+  animation-fill-mode: forwards;
 }
 
 @keyframes myAnimationName {
@@ -36,7 +30,7 @@ div {
   }
 
   100% {
-    transform: translateY(-200px);
+    transform: translateY(100px);
     background-color: pink;
   }
 }
