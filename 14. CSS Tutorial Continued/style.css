@@ -1,0 +1,37 @@
+/* variables inside :root {} are global */
+:root {
+  --myVariableName: value;
+
+  --oneColor: orange;
+  /* A varible can store any kind of value */
+  --myTransitionDefault: all 1s linear;
+  --transitionColor: purple;
+}
+
+.one {
+  color: var(--oneColor);
+  transition: var(--myTransitionDefault);
+}
+
+.one:hover {
+  color: var(--transitionColor);
+}
+
+.one-subheading {
+  color: var(--oneColor);
+}
+
+/* variable inside a given elment are local (available to them and their decendants only) */
+div {
+  --twoColor: royalblue;
+}
+
+.two {
+  /* CAN ACCESS --twoColor */
+  color: var(--twoColor);
+}
+
+.three {
+  /* CAN'T ACCESS --twoColor */
+  color: var(--twoColor);
+}
