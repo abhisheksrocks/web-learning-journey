@@ -1,4 +1,12 @@
-span {
-  /* To size fontawesome icon */
-  font-size: 4rem;
+h1 {
+  /* text-shadow: x-axis y-axis blur color; */
+  text-shadow: 2px 2px 8px red;
+}
+
+div {
+  /* box-shadow: x-axis y-axis blur spread color; */
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  box-shadow: 10px 10px 10px 20px rosybrown;
 }
