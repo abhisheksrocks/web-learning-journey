@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --slantedText: "Grand Hotel", cursive;
   --primaryColor: #698f3f;
@@ -15,27 +16,27 @@
   --mainTransition: all 0.3s ease-in-out;
   --letterSpacing: 0.5rem;
 }
+
 body {
   font-family: "Catamaran", sans-serif;
   line-height: 1.5;
 }
 
 /* helper/utility classes */
-a{
+a {
   text-decoration: none;
 }
 
-.text-white{
+.text-white {
   color: var(--mainWhite);
 }
 
-.text-center{
+.text-center {
   text-align: center;
 }
 
-.text-primary{
+.text-primary {
   color: var(--primaryColor);
-
 }
 
 /* clearfix */
@@ -44,13 +45,14 @@ a{
 /* navbar */
 
 /* header */
-header{
+header {
   min-height: 100vh;
-  background: linear-gradient(#00000080,#00000080), url(./images/main-bcg.jpeg) center/cover no-repeat fixed;
+  background: linear-gradient(#00000080, #00000080),
+    url(./images/main-bcg.jpeg) center/cover no-repeat fixed;
   position: relative;
 }
 
-.banner{
+.banner {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -59,23 +61,31 @@ header{
   letter-spacing: var(--letterSpacing);
 }
 
-.banner-subtitle{
+.banner-subtitle {
   font-family: var(--slantedText);
   font-size: 2rem;
   color: var(--primaryColor);
+  text-transform: lowercase;
   /* animation */
+  animation: onLoadSwipeFromRight 5s ease-in-out 1;
 }
 
-.banner-title{
+.banner-subtitle::first-letter {
+  text-transform: capitalize;
+}
+
+.banner-title {
   text-transform: uppercase;
   font-size: 3.2rem;
   color: var(--mainWhite);
   margin-top: 2.5rem;
   line-height: 1.3;
   /* animation */
+  animation: onLoadSwipeFromLeft 5s ease-in-out 1;
 }
 
-.banner-btn, .main-btn{
+.banner-btn,
+.main-btn {
   display: inline-block;
   padding: 0.8rem 1.2rem;
   background: var(--primaryColor);
@@ -87,14 +97,80 @@ header{
   margin-top: 2rem;
 }
 
-.main-btn:hover, .banner-btn:hover{
+.main-btn:hover,
+.banner-btn:hover {
   transition: var(--mainTransition);
   color: var(--mainWhite);
-  opacity: 0.7; 
+  opacity: 0.7;
 }
 
-.banner-btn{
+.banner-btn {
   padding: 1.2rem 1.5rem;
   /* animation */
+  animation: onLoadBannerBtn 1s ease 1;
 }
+
 /* end header */
+/* animations */
+@keyframes onLoadBannerBtn {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes onLoadSwipeFromRight {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  50% {
+    transform: translateX(-20vw);
+  }
+
+  75% {
+    transform: translateX(5vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes onLoadSwipeFromLeft {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  50% {
+    transform: translateX(20vw);
+  }
+
+  75% {
+    transform: translateX(-5vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* end animations */
+
+/* content divider */
+.content-divider {
+  height: 0.5rem;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
+}
+
+/* content divider end */
