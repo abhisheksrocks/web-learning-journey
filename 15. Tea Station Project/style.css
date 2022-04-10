@@ -40,6 +40,13 @@ a {
 }
 
 /* clearfix */
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* globals */
 
 /* navbar */
@@ -95,11 +102,11 @@ header {
   outline: 0.2rem solid var(--primaryColor);
   outline-offset: 4px;
   margin-top: 2rem;
+  transition: var(--mainTransition);
 }
 
 .main-btn:hover,
 .banner-btn:hover {
-  transition: var(--mainTransition);
   color: var(--mainWhite);
   opacity: 0.7;
 }
@@ -127,14 +134,17 @@ header {
 @keyframes onLoadSwipeFromRight {
   0% {
     transform: translateX(100vw);
+    transform: translateX(1000px);
   }
 
   50% {
     transform: translateX(-20vw);
+    transform: translateX(-200px);
   }
 
   75% {
     transform: translateX(5vw);
+    transform: translateX(50px);
   }
 
   100% {
@@ -145,14 +155,17 @@ header {
 @keyframes onLoadSwipeFromLeft {
   0% {
     transform: translateX(-100vw);
+    transform: translateX(-1000px);
   }
 
   50% {
     transform: translateX(20vw);
+    transform: translateX(200px);
   }
 
   75% {
     transform: translateX(-5vw);
+    transform: translateX(-50px);
   }
 
   100% {
@@ -172,5 +185,63 @@ header {
     var(--primaryColor)
   );
 }
-
 /* content divider end */
+
+/* skills */
+.skills {
+  background: var(--mainGrey);
+  transition: var(--mainTransition);
+}
+
+.skill {
+  transition: var(--mainTransition);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: var(--mainTransition);
+}
+
+.skill-title {
+  text-transform: uppercase;
+  color: var(--primaryColor);
+  font-weight: bold;
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 1.5rem;
+  transition: var(--mainTransition);
+}
+
+.skill-text {
+  max-width: 13rem;
+  margin: 0 auto;
+}
+
+.skill:hover {
+  background: var(--primaryColor);
+}
+
+.skill:hover > .skill-title {
+  color: var(--mainWhite);
+}
+
+.skill:hover > .skill-icon {
+  transform: translateY(-5px);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+}
+/* end skills */
