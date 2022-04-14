@@ -67,6 +67,11 @@ a {
   font-size: 2rem;
   text-transform: uppercase;
 }
+
+.section-text {
+  margin: 1rem 0;
+  max-width: 26rem;
+}
 /* navbar */
 
 /* header */
@@ -263,8 +268,8 @@ header {
   }
 }
 /* end skills */
-/* about */
 
+/* about */
 .about-img {
   padding: 2rem 0;
 }
@@ -287,11 +292,6 @@ header {
   display: block;
 }
 
-.about-text {
-  margin: 1rem 0;
-  max-width: 26rem;
-}
-
 @media screen and (min-width: 992px) {
   .about-img,
   .about-info {
@@ -301,3 +301,77 @@ header {
   }
 }
 /* end about */
+
+/* products */
+.products {
+  background: var(--mainDark);
+}
+
+.product-info {
+  float: left;
+}
+
+.product-info,
+.product-inventory {
+  padding: 2rem 0;
+}
+
+.single-product {
+  padding: 2rem 0;
+  float: left;
+}
+
+.product-img {
+  width: 100%;
+  display: block;
+  border-radius: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.product-title {
+  color: var(--mainWhite);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing);
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  color: var(--primaryColor);
+  letter-spacing: var(--letterSpacing);
+  font-family: var(--slantedText);
+}
+
+@media screen and (min-width: 768px) {
+  .single-product {
+    width: 50%;
+    float: left;
+    padding: 2rem 1rem;
+  }
+
+  .product-info {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .single-product {
+    width: 33.33%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .product-info {
+    float: left;
+    width: 30%;
+  }
+
+  .product-inventory {
+    float: left;
+    width: 70%;
+  }
+
+  .single-product {
+    padding: 1.5rem 1rem 0 1rem;
+  }
+}
+/* end products */
