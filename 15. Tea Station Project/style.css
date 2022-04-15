@@ -431,3 +431,31 @@ header {
     padding-top: 5rem;
   }
 }
+
+/* end contact */
+
+/* footer */
+.footer {
+  background: var(--mainDark);
+  text-align: center;
+}
+
+.social-icon {
+  color: var(--mainWhite);
+  margin: 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.social-icon:hover {
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+
+.footer-text {
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  letter-spacing: var(--letterSpacing);
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+/* end footer */
