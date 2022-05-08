@@ -76,6 +76,32 @@ a {
   margin: 1rem 0;
   max-width: 26rem;
 }
+/* nav button */
+.nav-btn-css {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: 1rem 1.3rem;
+  font-size: 2rem;
+  color: var(--primaryColor);
+  animation: bounce 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* end nav button */
+
 /* navbar */
 
 /* header */
