@@ -146,6 +146,11 @@ a {
   }
 }
 
+/* Used by javascript to show navbar */
+.showNav {
+  transform: translateX(0);
+}
+
 /* header */
 header {
   min-height: 100vh;
