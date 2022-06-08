@@ -9,12 +9,17 @@
     <style>
       .container {
         display: flex;
-        justify-content: flex-start; /* Default */
-        justify-content: flex-end;
-        justify-content: center;
-        justify-content: space-around;
-        justify-content: space-evenly;
-        justify-content: space-between;
+        height: 300px;
+        align-items: stretch; /* Default */
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: center;
+        align-items: baseline;
+      }
+
+      /* To understand 'align-items: baseline;' */
+      .box-3 {
+        font-size: 3rem;
       }
     </style>
   </head>
