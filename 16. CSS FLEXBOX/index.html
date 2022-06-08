@@ -7,10 +7,13 @@
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
-      /* flex can be of two types */
+      /* after specifying flex, we can also specify the flex-direction */
       .container {
         display: flex;
-        /* display: inline-flex; */
+        flex-direction: row; /* Default */
+        flex-direction: row-reverse;
+        flex-direction: column;
+        flex-direction: column-reverse;
       }
     </style>
   </head>
