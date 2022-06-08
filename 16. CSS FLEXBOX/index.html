@@ -7,12 +7,14 @@
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
-      /* after specifying flex, we can also specify the flex-wrap */
       .container {
         display: flex;
-        flex-wrap: nowrap; /* Default */
-        flex-wrap: wrap;
-        flex-wrap: wrap-reverse;
+        justify-content: flex-start; /* Default */
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        justify-content: space-between;
       }
     </style>
   </head>
@@ -23,10 +25,6 @@
       <div class="box box-3">3</div>
       <div class="box box-4">4</div>
       <div class="box box-5">5</div>
-      <div class="box box-4">G</div>
-      <div class="box box-3">G</div>
-      <div class="box box-2">G</div>
-      <div class="box box-1">G</div>
     </div>
   </body>
 </html>
