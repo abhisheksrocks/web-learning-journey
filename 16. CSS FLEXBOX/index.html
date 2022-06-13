@@ -7,29 +7,26 @@
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
+      /*
+        The following shows an example of how easy it is
+        to center the content with flex.
+      */
+
       .container {
         display: flex;
         height: 300px;
-        align-items: stretch; /* Default */
-        align-items: flex-start;
-        align-items: flex-end;
         align-items: center;
-        align-items: baseline;
+        justify-content: center;
       }
 
-      /* To understand 'align-items: baseline;' */
-      .box-3 {
-        font-size: 3rem;
+      h1 {
+        text-align: center;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <div class="box box-1">1</div>
-      <div class="box box-2">2</div>
-      <div class="box box-3">3</div>
-      <div class="box box-4">4</div>
-      <div class="box box-5">5</div>
+      <h1>Centered Content</h1>
     </div>
   </body>
 </html>
