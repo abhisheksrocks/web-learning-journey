@@ -7,32 +7,37 @@
     <title>CSS Flexbox</title>
     <link rel="stylesheet" href="./style.css" />
     <style>
+      /* When 'flex-direction: row;', the main axis is horizontal,
+         and cross axis is vertical */
       .container {
         display: flex;
         height: 300px;
-        /*
-        The align-content property is not really same as align-items
-        */
+        flex-direction: row; /* Default */
 
-        /* To see align-content in action we must use 'flex-wrap: wrap;' */
-        flex-wrap: wrap;
+        /* 'justify-content: center' centers the content along
+           the main axis */
+        justify-content: center;
 
-        /* Uncomment the following to compare and see the difference */
-        /* align-items: stretch;
-        align-items: flex-start;
-        align-items: flex-end;
-        align-items: baseline;
-        align-items: center; */
+        /* 'align-items: center;' centers the content along
+           the cross axis */
+        align-items: center;
+      }
 
-        align-content: stretch; /* Default */
-        align-content: flex-end;
-        align-content: flex-start;
-        align-content: space-around;
-        align-content: space-between;
-        align-content: center;
+      /* When 'flex-direction: column;', the main axis is vertical, 
+      and cross axis is horizontal */
+      .container-1 {
+        display: flex;
+        height: 600px;
+        border: 5px solid red;
+        flex-direction: column;
 
-        /* AS THE NAME CAN SUGGEST, align-items APPLIES TO EACH ITEM INDIVIDUALLY
-        WHEREAS align-content APPLIES TO THE WHOLE CONTENT AT ONCE */
+        /* 'justify-content: center' centers the content along
+           the main axis */
+        justify-content: center;
+
+        /* 'align-items: center;' centers the content along
+           the cross axis */
+        align-items: center;
       }
     </style>
   </head>
@@ -43,10 +48,13 @@
       <div class="box box-3">3</div>
       <div class="box box-4">4</div>
       <div class="box box-5">5</div>
-      <div class="box box-3">G</div>
-      <div class="box box-4">G</div>
-      <div class="box box-1">G</div>
-      <div class="box box-2">G</div>
+    </div>
+    <div class="container-1">
+      <div class="box box-1">1</div>
+      <div class="box box-2">2</div>
+      <div class="box box-3">3</div>
+      <div class="box box-4">4</div>
+      <div class="box box-5">5</div>
     </div>
   </body>
 </html>
