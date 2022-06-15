@@ -9,43 +9,19 @@
     <style>
       .container {
         display: flex;
-
-        flex-direction: row; /* default */
-        /* flex-direction: column; */
+        height: 300px;
+        align-items: flex-start;
       }
 
-      /* We can set the order of how the element
-         are organised within the flex parent, by
-         using the property 'order: <integer>'.
-         By default, the order of all the children
-         elements are 0, i.e. 'order: 0;' */
-
-      /* The elements are arraged based on their
-         order values:-
-         
-         Before:-
-         [1][2][3][4][5] -> box
-          0  0  0  0  0  -> orders
-
-          If two elements have the same order,
-          they would be arranged based on their
-          general position only.
-      */
-
-      .box-1 {
-        order: 1;
-        /* 
-         [2][3][4][5][1]
-          0  0  0  0  1
-         */
-      }
+      /* We can align a specific item within a
+         flex parent using 'align-self' property */
 
       .box-3 {
-        order: 2;
-        /* 
-         [2][4][5][1][3]
-          0  0  0  1  2
-        */
+        align-self: center;
+      }
+
+      .box-5 {
+        align-self: stretch;
       }
     </style>
   </head>
