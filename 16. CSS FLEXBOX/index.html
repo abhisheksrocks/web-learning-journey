@@ -11,20 +11,26 @@
         display: flex;
         flex-wrap: wrap;
       }
-      /* Similarly like flex-grow, flex-shrink is to
-      manage the shrinking behaviour of the boxes */
+      /* If we want the flex decendant items to support
+      a minimum width, we can do so with flex-basis */
 
-      /* By default, 'flex-shrink: 1', causing the element
-      to shrink(i.e. decrease it's width) to prevent
-      overflow of its neighbors */
+      /* why not set a min-width only? because we have
+      flex-direction property, for which the width changes
+      to height, when using flex-basis */
 
-      /* if flex-wrap is true, then also it will try to
-      position itself as nicely as possible, causing the rest
-      elements to move to the next line if required */
-      .box-1 {
-        width: 500px;
-        flex-shrink: 1; /* Default */
-        /* flex-shrink: 0; */
+      /* By default, 'flex-basis: auto' */
+      .box {
+        flex-basis: 100px; /*setting the minimum width */
+
+        /* flex-grow: 1; */
+        /* try using this with 'flex-wrap:wrap' to see the difference */
+
+        /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+        /* The following is a shorthand:
+        flex: <flex-grow> <flex-shrink> <flex-basis>
+        */
+        flex: 1 0 100px;
+        /* grow as much as you want <sp> don't shrink <sp> keep minimum width 100px*/
       }
     </style>
   </head>
