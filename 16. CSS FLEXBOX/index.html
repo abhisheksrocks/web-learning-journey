@@ -9,31 +9,22 @@
     <style>
       .container {
         display: flex;
-        /* flex-direction: column;
-        height: 400px; */
         flex-wrap: wrap;
       }
+      /* Similarly like flex-grow, flex-shrink is to
+      manage the shrinking behaviour of the boxes */
 
-      /* We can use flex-grow property in each child
-         element to define how much space it can
-         take in the given vertical space. We can
-         also use flex-wrap to fix any overflow
-         issue. */
+      /* By default, 'flex-shrink: 1', causing the element
+      to shrink(i.e. decrease it's width) to prevent
+      overflow of its neighbors */
 
-      /* If 'flex-grow: 1' for each child, then each
-         would take equal space in the vertical space.
-         If for one child the flex-grow value is 2,
-         whereas for the rest of them it is 1, then
-         that child would try to take twice as much space
-         as the other child's width/height
-         (based on flex direction) */
-
-      .box {
-        flex-grow: 1;
-      }
-
+      /* if flex-wrap is true, then also it will try to
+      position itself as nicely as possible, causing the rest
+      elements to move to the next line if required */
       .box-1 {
-        flex-grow: 2;
+        width: 500px;
+        flex-shrink: 1; /* Default */
+        /* flex-shrink: 0; */
       }
     </style>
   </head>
@@ -44,11 +35,11 @@
       <div class="box box-3">3</div>
       <div class="box box-4">4</div>
       <div class="box box-5">5</div>
-      <div class="box box-1">1</div>
+      <!-- <div class="box box-1">1</div>
       <div class="box box-2">2</div>
       <div class="box box-3">3</div>
       <div class="box box-4">4</div>
-      <div class="box box-5">5</div>
+      <div class="box box-5">5</div>  -->
     </div>
   </body>
 </html>
